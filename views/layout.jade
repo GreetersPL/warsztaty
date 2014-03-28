@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Greeters Polska
+    link(rel='stylesheet', href='/stylesheets/app.css' + cachebust)
+    script(src='/javascripts/bundle.js')
+
+
+    if reload
+      script(src='/socket.io/socket.io.js')
+      script(src='/javascripts/reload-client.js')
+
+  body
+    block content

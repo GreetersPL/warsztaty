@@ -1,0 +1,29 @@
+<div>
+  {{view Ember.TextField id="confirmCode" type="text" class='form-control col-xs-4' placeholder="Wpisz kod z e-maila"}}<a  class="btn btn-primary" {{action 'confirm' }}>Potwierdź</a>
+</div>
+<h2>Zapisz się na zajecia!</h2>
+{{#each workshop in content}}
+	<h3>Dni:{{workshop.startHuman}}-{{workshop.endHuman}}<h3>
+	{{#each workshop.blocks}}
+		<h3>{{name}}</h3>
+		<p>Dzień: {{dateHuman}}</p>
+		<p>Miejsce: {{place}}</p>
+		<ul>
+		{{#each classes}}
+		<li>
+			<h4>{{title}}<h4>
+			<p>
+				<span>Początek: {{beginHuman}} </span>
+				<span>Koniec: {{endHuman}}</span><br>
+				{{about}}
+			</p>
+			<button  class="btn btn-primary" {{action 'signup' id}}>Zapisz się</button>
+		</li>
+		{{else}}
+			<h4>Brak zajęć w podanym bloku</h4>
+		{{/each}}
+		</ul>
+	{{/each}}
+{{else}}
+<h2>Brak warsztatów</h2>
+{{/each}}

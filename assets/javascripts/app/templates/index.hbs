@@ -1,0 +1,24 @@
+{{view App.HeaderView id="start"}}
+{{view App.AboutView id="about"}}
+{{view App.WhoView id="who"}}
+{{view App.WhereView id="where"}}
+<div class="col-xs-12">
+{{#each info}}
+	{{#if success}}
+		<div class="alert alert-success alert-dismissable">
+  			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			{{text}}
+		</div>
+	{{else}}
+	<div class="alert alert-warning alert-dismissable">
+  			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			{{text}}
+		</div>
+	{{/if}}
+{{/each}}
+<div>
+{{view App.SignupView id="signup" contentBinding='model'}}
+{{view App.QuestionsView id="questions"}}
+{{view App.AboutUsView id="about_us"}}
+{{view App.PartnersView id="partners"}}
+{{view App.ModalView}}

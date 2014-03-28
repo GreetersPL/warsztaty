@@ -1,0 +1,30 @@
+<div id="personData" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Podaj swoje dane</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="personName">Imię</label>
+            {{view Ember.TextField id="personName" type="text" class='form-control' placeholder="Wpisz numer telefonu" valueBinding="App.IndexController.name"}}
+          </div>
+          <div class="form-group">
+            <label for="personPhone">Telefon</label>
+            {{view Ember.TextField id="personPhone" type="text" class='form-control' placeholder="Wpisz numer telefonu" valueBinding="App.IndexController.phone"}}
+
+          </div>
+          <div class="form-group">
+            <label for="personEmail">Adres e-mail</label>
+            {{view Ember.TextField id="personEmail" type="email" class='form-control' placeholder="Wpisz E-mail" valueBinding="App.IndexController.email"}}
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a {{action 'dataConfirmed'}} class="btn btn-primary">Potwierdź dane</a>
+      </div>
+    </div>
+  </div>
+</div>
