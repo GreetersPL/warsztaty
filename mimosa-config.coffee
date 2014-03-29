@@ -1,5 +1,6 @@
 exports.config =
   modules: [
+    "server-template-compile"
     "server"
     "browserify"
     "csslint"
