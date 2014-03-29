@@ -1,5 +1,6 @@
 @import "vendor/bootstrap";
 @import "greeters/colors";
+@import "greeters/line";
 
 @font-face {
     font-family:Author One;
@@ -33,6 +34,9 @@ nav {
     li a {
       color: white;
     }
+    li a:hover {
+      color: $medium-gray;
+    }
     li.active a {
       background-color: $light-blue;
       &:hover {
@@ -41,6 +45,10 @@ nav {
     }
   }
   
+}
+
+.btn-primary {
+margin-top: 5px;
 }
 
 header {
@@ -60,7 +68,23 @@ header {
 
 #about, #who, #where, #signup, #questions, #about_us, #partners {
   @extend .col-xs-12;
+  .justify {
+    text-align: justify;
+  }
+  .title {
+    text-align: center;
+  }
 }
 .logo{
   height: 150px;
 }
+.partner_logo {
+  display: block;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+

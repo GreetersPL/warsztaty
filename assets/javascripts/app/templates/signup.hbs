@@ -1,22 +1,26 @@
+<h2 class="title">Zapisz się na zajecia!</h2>
+
 <div>
   {{view Ember.TextField id="confirmCode" type="text" class='form-control col-xs-4' placeholder="Wpisz kod z e-maila"}}<a  class="btn btn-primary" {{action 'confirm' }}>Potwierdź</a>
 </div>
-<h2>Zapisz się na zajecia!</h2>
+
 {{#each workshop in content}}
 	<h3>Dni:{{workshop.startHuman}}-{{workshop.endHuman}}<h3>
 	{{#each workshop.blocks}}
-		<h3>{{name}}</h3>
-		<p>Dzień: {{dateHuman}}</p>
-		<p>Miejsce: {{place}}</p>
+		<h3 class="blockName">{{name}}</h3>
+		<p class="blockDay">Dzień: {{dateHuman}}</p>
+		<p class="blockPlace">Miejsce: {{place}}</p>
 		<ul>
 		{{#each classes}}
 		<li>
-			<h4>{{title}}<h4>
+			<h4 class="workshopTitle">{{title}}<h4>
 			<p>
-				<span>Początek: {{beginHuman}} </span>
-				<span>Koniec: {{endHuman}}</span><br>
-				{{about}}
-			</p>
+				<span class="workshopBegin">Początek: {{beginHuman}} </span>
+				<span class="workshopEnd">Koniec: {{endHuman}}</span><br/><br/>
+				<p class="workshopDesc">
+          {{about}}
+        </p>			
+      </p>
 			<button  class="btn btn-primary" {{action 'signup' id}}>Zapisz się</button>
 		</li>
 		{{else}}
