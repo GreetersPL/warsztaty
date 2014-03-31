@@ -65,6 +65,9 @@ exports.config =
            {'vendor/assets/javascripts': './'}
            {'vendor/assets/stylesheets': './'}
            {'vendor/assets/fonts': '../../fonts'}
+        ],
+        'momentjs': [
+            {'lang/pl.js': './lang'}
         ]
   combine:
     folders: [

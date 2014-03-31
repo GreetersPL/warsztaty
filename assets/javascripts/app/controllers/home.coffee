@@ -13,6 +13,9 @@ module.exports = App.IndexController = Ember.ArrayController.extend
   		localStorage.setItem('name', @.get('name'))
 
 	actions:
+    showPopover: (clas)->
+      $("##{clas.get('liID')} .workshopLeader a").popover({content: clas.get('leader.about'), trigger: 'hover'})
+  
     confirm: ()->
       kod = $('#confirmCode').val()
       

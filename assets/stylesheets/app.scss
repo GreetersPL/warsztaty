@@ -1,3 +1,4 @@
+@import "compass/css3";
 @import "vendor/bootstrap";
 @import "greeters/colors";
 @import "greeters/line";
@@ -11,7 +12,10 @@ body {
   font-family:Author One;
   background-color: $light-gray;
 }
-
+.btn-primary {
+  background-color: $fiolet;
+  border-color: $fiolet;
+}
 nav {
   @extend .navbar;
   @extend .navbar-default;
@@ -52,8 +56,7 @@ margin-top: 5px;
 }
 
 header {
-  @extend .center-block;
-  @extend .col-xs-12;
+  @extend .jumbotron;
   @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
     padding-top: 180px;
   }
@@ -68,23 +71,44 @@ header {
 
 #about, #who, #where, #signup, #questions, #about_us, #partners {
   @extend .col-xs-12;
-  .justify {
-    text-align: justify;
-  }
-  .title {
-    text-align: center;
+  @extend .text-justify;
+  h2 {
+    @extend .text-center;
   }
 }
 .logo{
   height: 150px;
 }
-.partner_logo {
-  display: block;
-  width: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
+#partners > div {
+  @extend .text-center;
+  @extend .row;
+  div {
+    @extend .col-xs-12;
+    @extend .col-md-4;
+  }
 }
 
-
+#signup ul{
+  @extend .row;
+  list-style-type: none;
+  li {
+    @extend .col-xs-12;
+    @extend .col-md-4;
+    @extend .col-md-offset-1;
+    @include border-radius(10px);
+    border-color: $medium-gray;
+    border-style: solid;
+    @include single-transition();
+    .workshopTitle {
+      @extend .text-center;
+      font-size: 22px;
+    }
+    &:hover {
+      border-color: $light-blue;
+      @include single-box-shadow($gray, 0, 0, 10px);
+    }
+  }
+}
+.blockDay, .blockPlace {
+  font-size: 20px
+}

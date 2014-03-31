@@ -5,7 +5,6 @@ module.exports = App.NavbarView = Ember.View.extend
     $('body').scrollspy(
       target: 'nav'
     )
-    $spy = $(@).scrollspy('refresh')
   actions: 
     collapse: (e)->
       $(e).collapse('toggle')

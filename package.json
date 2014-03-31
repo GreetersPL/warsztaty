@@ -1,7 +1,7 @@
 {
   "name": "greeters-skel",
-  "version": "0.0.5",
-  "description": "A Mimosa starter skeleton",
+  "version": "0.0.8",
+  "description": "Greeters.pl Workshop site",
   "devDependencies": {
     "mimosa-coffeescript": "*",
     "mimosa-sass": "*",
