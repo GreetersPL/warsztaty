@@ -109,6 +109,12 @@ header {
     }
   }
 }
+.blockName{
+  @extend .text-center
+  font-size: 28px;
+  
+}
+
 .blockDay, .blockPlace {
   font-size: 20px
 }

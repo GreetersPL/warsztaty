@@ -1,6 +1,6 @@
 {
   "name": "greeters-skel",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Greeters.pl Workshop site",
   "devDependencies": {
     "mimosa-coffeescript": "*",
