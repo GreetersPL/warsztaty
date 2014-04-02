@@ -29,7 +29,7 @@ module.exports = App.IndexController = Ember.ArrayController.extend
           else if data.error is "limit"
             @.info.pushObject({success: false, text:'Limit zapisu został przekroczony!'})
           else
-            @.info.pushObject({success: false, text:'Niestety coś poszło nie, spróbuj jeszcze raz!'})
+            @.info.pushObject({success: false, text:'Niestety coś poszło nie tak, proszę spróbuj jeszcze raz!'})
 			)
       return false
 		signup: (id)->
@@ -49,9 +49,9 @@ module.exports = App.IndexController = Ember.ArrayController.extend
 			}
 			post = $.post(App.apiUrl+'/workshops/'+@.get('singup_model'), data)
 			post.then(((data)=>
-          @.info.pushObject({success: true, text: 'Kod powinien zostać przesłany na podany email'})
+          @.info.pushObject({success: true, text: 'Kod powinien zostać przesłany na podany email.'})
         ), (data)=>
-          @.info.pushObject({success: false, text:'Niestety coś poszło nie, spróbuj jeszcze raz!'})
+          @.info.pushObject({success: false, text:'Niestety coś poszło nie tak, proszę spróbuj jeszcze raz!'})
       )
 			@.saveDataToStorage()
 
